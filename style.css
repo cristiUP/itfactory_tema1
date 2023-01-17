@@ -1,0 +1,150 @@
+/* chestiile generale si body */
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body{
+    max-width: 980px;
+    margin: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: #f1f1f1;
+
+}
+a{
+    color: #cc0000;
+    text-decoration: none;
+}
+a:hover{
+    color: #666;
+}
+h2{
+    margin-block-end: 5px;
+}
+
+h5 {
+    color: #cc0000;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-block-start: 5px;
+    margin-block-end: 10px;
+
+}
+
+/* Aici o sa scriem ce tine de header */
+.header {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+  }
+
+.header h1 {
+    font-size: 50px;
+  }
+/* punem si un topnav, care ar putea deveni un meniu, eu l-am aduagat doar pentru culoare deocamdata */
+.topnav {
+    overflow: hidden;
+    background-color: #cc0000;
+    position: sticky; /* lipim bara cu linkuri de marginea de sus a ecranului */
+    top: 0; /* marginea de sus pentru bara de meniu*/
+}
+/* Stilizam bara de meniu */
+.topnav a {
+
+    float: left;
+    display: block;
+    color: #ddd;
+    text-align: center;
+    font-weight: bold;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-right: 1px solid #ddd;
+  }
+/* pentru cand stam cu mouse-ul deasupra butonului */
+.topnav a:hover {
+    background-color: #f00;
+    color: #f2f2f2;
+}
+/* resetam float-ul de la coloanele din campul principal pentru ca sa ajunga footer-ul acolo unde trebuie
+ -  si tot de aici incepem sa scriem stilurile pentru campul principal */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+img{
+    float: left;
+    padding: 2px 25px 5px 2px;
+    height: 85px;
+}
+
+.main{
+    float: left;
+    width: 75%;
+    padding-right: 15px;
+}
+.sidebar {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 15px;
+}
+/* Un pic de umbre pentru divurile care vor contine informatii */
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.left{
+    min-height: 225px;
+}
+.side {
+    background-color: #f1f1f1;
+}
+.main p{
+    color: #666;
+    font-size: 16px;
+    padding: 2px;
+    text-align: justify;
+}
+/* o sa-l folosesc pe h6 la linkuri, 
+desi nu are nici un rost, si n-ar trebui, dar il folosesc doar ca sa indeplinesc conditia din tema de a avea un H aici in descriere */
+.main h6 { 
+    text-align: right;
+    text-transform: uppercase;
+    color: #cc0000;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* si un footer pus degeaba doar pentru design.  */
+.footer {
+    padding: 10px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+  }
+.footer p{
+    font-size: 14px;
+}
+
+
+
+
+/* Responsive layout - cand ecranul e sub 600px width, punem coloanele una sub alta in loc de un una langa alta */
+@media screen and (max-width: 600px) {
+    .main, .sidebar {   
+      width: 100%;
+      padding: 0;
+    }
+}
+/* Daca tot am facut layout-ul responsive, atunci sa facem si navbar-ul responsiv. de data asta pentru 400px*/
+@media screen and (max-width: 400px){
+    .topnav a {
+        text-align: center;
+        float: none;
+        border-bottom: 1px solid #bbb;
+      }
+}
